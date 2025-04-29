@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoppBooks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,5 +40,41 @@
     <p class="banner-texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
     <input class="banner-pesquisa" type="search" placeholder="Qual será sua próxima leitura?">
 </section>
+<section class="carrossel">
+    <h2 class="carrossel-titulo">últimos lançamentos</h2>
+    <!-- Slider main container -->
+<div class="swiper">
+     <!-- If we need pagination -->
+     <div class="swiper-pagination"></div>
+    <!-- Additional required wrapper -->
+
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img class="img-format" src="Img/Livro1.jpg" alt="Livro harry potter e o prisioneiro de azkaban"></div>
+      <div class="swiper-slide"><img src="Img/livro5.svg" alt="Livro sobre liderança em design"></div>
+      <div class="swiper-slide"><img src="Img/Livro4.svg" alt="Livro sobre logica de programação em portugol"></div>
+      <div class="swiper-slide"><img class="img-format" src="Img/Livro2.jpg" alt="Livro Antes do BigBang, história sobre o universo"></div>
+      <div class="swiper-slide"><img class="img-format" src="Img/Livro3.jpg" alt="Livro sobre a teoria das cores"></div>
+      <div class="swiper-slide"><img src="Img/livro6.svg" alt="Livro sobre desenvolvimento de aplicativos mobile com react"></div>
+    </div>
+   
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+  spaceBetween: 10,
+  slidesPerView:3,
+  pagination:{
+    el:'.swiper-pagination',
+    type:'bullets',
+  },
+});
+</script>
 </body>
 </html>
